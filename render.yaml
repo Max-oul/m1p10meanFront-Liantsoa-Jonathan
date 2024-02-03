@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: my-angular-app  # Give your service a descriptive name
+    runtime: node
+    repo: https://github.com/Max-oul/m1p10meanFront-Liantsoa-Jonathan 
+    plan: starter  # Choose a plan based on your needs
+    branch: main  # Specify the branch to deploy
+    rootDir: dist  # Set the root directory to the output of your Angular build
+    buildCommand: npm install && npm run build  # Build commands for Angular
+    startCommand: npm start  # Command to start your Node.js backend
+    envVars:
+      - key: NODE_SERVER_URL  
+        value: http://localhost:3000
