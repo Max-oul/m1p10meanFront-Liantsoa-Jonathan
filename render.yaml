@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-angular-app  # Give your service a descriptive name
+    name: m1p10Front  # Give your service a descriptive name
     runtime: node
     repo: https://github.com/Max-oul/m1p10meanFront-Liantsoa-Jonathan 
     plan: starter  # Choose a plan based on your needs
