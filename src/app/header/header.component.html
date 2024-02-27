@@ -1,0 +1,26 @@
+<nav class="nav navbar-nav sticky-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-3">
+                <div class="logo">
+                    <img src="../../assets/logo_transparent.png" class="logo" alt="">
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-9 text-end">
+                <div class="menu-icon" (click)="openMenu()">
+                    <i class="{{menu_icon}}"></i>
+                </div>
+                <div class="desktop_menu" [class.mobile_menu]="menuValue">
+                    <ul>
+                        <li (click)="openMenu()">Home</li>
+                        <li (click)="closeMenu()">Contact us</li>
+                        <li (click)="closeMenu()">Cart</li>
+                        <li><span class="verticaLine"></span>|</li>
+                        <li (click)="closeMenu()">Sign</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+

@@ -1,0 +1,12 @@
+<a href="">
+    <mat-card>
+        <img [src]="product.imageUrl" alt="product-image-card" mat-card-image>
+        <mat-card-header>    
+            <mat-card-subtitle>{{product.title}}</mat-card-subtitle>
+            <mat-card-title>{{product.price | currency:'EUR'}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions class="add-cart-btn">
+            <button class="btn btn-primary">Add to cart</button>
+        </mat-card-actions>
+    </mat-card>
+</a>

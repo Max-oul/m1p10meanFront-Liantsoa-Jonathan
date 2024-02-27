@@ -1,0 +1,46 @@
+<div class="main">
+    <div class="couverture">
+        <img src="../../assets/img/couverture.png" alt="Photo de couverture" class="img-cov">
+        <div class="col-main-card">
+            <mat-card>
+                <mat-card-header class="mat-card-content">
+                    <button class="btn btn-primary btn-rdv">
+                        <i class="bi bi-calendar-plus-fill"></i>
+                        <p>Prendre rendez-vous</p>
+                    </button>
+                </mat-card-header>
+                <h1>Produits et service de salon de beauté</h1>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search product" aria-label="Search">
+                    <button class="btn btn-primary btn-search" type="submit">Search</button>
+                </form> 
+                <div class="col all-product">
+                    <div class="row">
+                        <app-product class="col" *ngFor="let product of products" [product]="product"></app-product>
+                    </div>
+                </div>
+                <mat-card-header>
+                    <div class="row">
+                        <div class="col">
+                            <div mat-card-avatar class="header-image"></div>
+                            <mat-card-title>ANDRIAMANATSIHOARANA</mat-card-title>
+                            <mat-card-subtitle>Jonathan Malala</mat-card-subtitle>
+                            <mat-card-content>
+                                <p></p>
+                            </mat-card-content>
+                        </div>
+                        <div class="col">
+                            <div mat-card-avatar class="header-image1"></div>
+                            <mat-card-title>ANJARAMAMY</mat-card-title>
+                            <mat-card-subtitle>Liantsoa</mat-card-subtitle>
+                            <mat-card-content>
+                                <p></p>
+                            </mat-card-content>
+                        </div>
+                    </div>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
