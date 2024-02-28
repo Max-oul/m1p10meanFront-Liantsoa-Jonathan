@@ -1,0 +1,19 @@
+.login-container {
+    background-color:#f6ad48;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    top: 25vh;
+    left: 15vw;
+    width: 70vw;
+  }
+
+.btn{
+    background-color:  #321313;
+    border: none;
+    width: 100%;
+}
+
+.login-container button:hover{
+    background-color: #133213;
+}

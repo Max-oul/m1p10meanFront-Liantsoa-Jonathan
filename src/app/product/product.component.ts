@@ -3,6 +3,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { Product } from '../models/product';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -12,8 +13,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent implements OnInit{
+
+  constructor(private router: Router){}
+
   @Input() product!: Product
 
   ngOnInit(): void {
+  }
+
+  onViewProduct(){
+    this.router.navigateByUrl(`home/product-view/${this.product.id}`)
   }
 }

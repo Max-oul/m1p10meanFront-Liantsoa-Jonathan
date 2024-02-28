@@ -38,4 +38,8 @@ $m1p10_front-theme: mat.define-light-theme((
     font-family: Roboto, Helvetica, sans-serif;
   };
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-typography { 
+        margin: 0; 
+        font-family: Roboto, "Helvetica Neue", sans-serif; 
+        background-color: #f2ead3
+      }

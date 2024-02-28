@@ -1,4 +1,4 @@
-header {
+nav {
     padding: 10px;
     background: #f2ead3;
   }
@@ -33,9 +33,10 @@ header {
   .menu-icon {
     display: none;
   }
-  
-  .verticaLine{
-    color: #321313;
+  .log-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   @media screen and (min-width: 128px) and (max-width: 900px) {

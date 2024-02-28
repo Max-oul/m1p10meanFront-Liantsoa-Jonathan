@@ -1,6 +1,6 @@
-<a href="">
-    <mat-card>
-        <img [src]="product.imageUrl" alt="product-image-card" mat-card-image>
+<a (click)="onViewProduct()">
+    <mat-card class="product">
+        <img [src]="product.imageUrl" alt="product-image-card" mat-card-image class="image-product-card">
         <mat-card-header>    
             <mat-card-subtitle>{{product.title}}</mat-card-subtitle>
             <mat-card-title>{{product.price | currency:'EUR'}}</mat-card-title>

@@ -1,1 +1,33 @@
-<p>view-product works!</p>
+<div class="container modal-content-wrapper">
+    <mat-card class="view-product">
+        <mat-card-actions class="container-btn-fav-exit">
+            <button mat-icon-button color="warn" aria-label="heart icon" class="fav-btn">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" aria-label="clear" (click)="onBack()">
+                <mat-icon>close</mat-icon>
+              </button>    
+        </mat-card-actions>
+        <img [src]="product.imageUrl" alt="product-image-card" mat-card-image class="card-image">
+        <div class="row title-price">
+            <div class="col ">
+                <h1>{{product.title}}</h1>
+            </div>
+            <div class="col text-end">
+                <h2>{{product.price | currency:'EUR'}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>
+        <mat-divider></mat-divider>
+        <mat-card-content class="desc-cont">
+            <p>{{product.description}}</p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions class="add-cart-btn"> 
+            <button class="btn btn-primary">Order now</button>
+            <button class="btn btn-primary">Add to cart</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
