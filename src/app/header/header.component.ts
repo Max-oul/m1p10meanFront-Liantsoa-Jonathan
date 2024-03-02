@@ -40,10 +40,10 @@ export class HeaderComponent implements OnInit {
       this.menu_icon = 'bi bi-list';
   }
 
-   onSignPage(){
+   onLoginPage(){
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';
-    this.router.navigateByUrl('/home/auth/');
+    this.router.navigateByUrl('/home/login/');
    }
 
    onCartPage(){
