@@ -3,25 +3,32 @@ import { Router } from '@angular/router';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
+import { CookieService } from 'ngx-cookie-service';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { AuthService } from '../services/auth/auth-service.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatDividerModule,MatExpansionModule,MatIconModule],
+  imports: [MatDividerModule,MatExpansionModule,MatIconModule, NgIf, AsyncPipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private router : Router){
-  }
-
   menuValue!:boolean;
   menu_icon!:string;
+  isAuthenticated!: Observable<boolean>;
+
+  constructor(private router : Router, private cookieService: CookieService, private authService: AuthService) {
+  }
 
   ngOnInit(): void {
     this.menuValue = false;
-    this.menu_icon = 'bi bi-list'
+    this.menu_icon = 'bi bi-list';
+    this.isAuthenticated = new Observable<boolean>(observer => {
+      observer.next(this.cookieService.check('user-data'));
+    });
   }
 
   openMenu(){
@@ -43,7 +50,12 @@ export class HeaderComponent implements OnInit {
    onSignPage(){
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';
-    this.router.navigateByUrl('/home/auth/');
+    if(this.isAuthenticated){
+      this.authService.logout();
+      this.router.navigateByUrl('/home/auth/');
+    } else {
+      this.router.navigateByUrl('/home/auth/');
+    }
    }
 
    onCartPage(){

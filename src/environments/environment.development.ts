@@ -1,4 +1,4 @@
 export const environment = {
     production: false, 
-    apiUrl: "https://localhost:5001/api/",
+    apiUrl: "https://cute-blue-elephant-vest.cyclic.app/api/v1/",
 };
