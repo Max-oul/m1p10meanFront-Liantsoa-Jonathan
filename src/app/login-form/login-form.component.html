@@ -1,4 +1,4 @@
-<form class="login-container">
+<!-- <form class="login-container">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -13,4 +13,30 @@
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> -->
+
+<div class="main-container">
+  <div class="col">
+    <div class="login-container">
+      <h4>Vous avez déjà utilisé notre plateforme ?</h4>
+      <form (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" [(ngModel)]="email" required> <!--[(ngModel)]="email"> [(ngModel)]="password"-->
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+        <button type="submit">Se connecter</button>
+        <a href="#">Mot de passe oublié ?</a>
+      </form>
+      <div class="horizontal-line"></div>
+      <h4>Nouveau sur notre plateforme ?</h4>
+      <button (click)="createAccount()">Créer un compte</button>
+    </div>
+  </div>
+  <div class="col img">
+    <img src="../../assets/img/couverture-login.png" alt="image de couverture">
+  </div>
+</div>

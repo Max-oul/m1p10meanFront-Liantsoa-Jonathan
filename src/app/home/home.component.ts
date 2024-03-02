@@ -5,6 +5,7 @@ import { ProcuctService } from '../services/product.service';
 import { Product } from '../models/product';
 import { CommonModule, NgFor } from '@angular/common';
 import { ProductComponent } from '../product/product.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,9 +16,16 @@ import { ProductComponent } from '../product/product.component';
 })
 
 export class HomeComponent implements OnInit{
-  constructor(private productService:ProcuctService){}
+  constructor(private productService:ProcuctService,
+              private router: Router){}
+
   products!: Product[];
+  
   ngOnInit(): void {
     this.products = this.productService.getAllProduct();
+  }
+
+  onAppointementScheduling(){
+    this.router.navigateByUrl('home/appointment_scheduling/')
   }
 }

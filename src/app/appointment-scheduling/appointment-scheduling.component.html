@@ -1,0 +1,31 @@
+<!-- appointment.component.html -->
+
+<div class="appointment-container">
+    <h2>Services disponibles</h2>
+    <div class="form-search">
+        <input class="form-control mr-sm-2" type="text" placeholder="Rechercher un service">
+    </div> 
+    <ul>
+      <li *ngFor="let service of filteredSalonServices" class="service-item">
+        <div class="service-info">
+          <img [src]="service.imageUrl" alt="{{ service.name }}" class="service-image">
+          <div class="service-details">
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+            <div class="row">
+                <div class="col">
+                    <p>Durée : {{ service.duration | date:'HH:mm' }}</p>
+                </div>
+                <div class="col text-end">
+                    <p>Prix : {{ service.price }} €</p>
+                </div>
+            </div>
+            <div class="container-btn">
+                <button (click)="orderNow(service)" class="btn btn-primary" >Take now</button>
+                <button (click)="addToCart(service)" class="btn btn-primary">Add cart</button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+</div>

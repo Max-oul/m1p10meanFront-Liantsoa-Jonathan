@@ -1,19 +1,89 @@
+// .login-container {
+//     background-color:white;
+//     border-radius: 10px;
+//     padding: 10px;
+//     position: relative;
+//     top: 25vh;
+//     left: 15vw;
+//     width: 70vw;
+//   }
+
+// .btn{
+//     background-color:  #321313;
+//     border: none;
+//     width: 100%;
+// }
+
+// .login-container button:hover{
+//     background-color: #dc8a17;
+// }
+
+/* login-form.component.css */
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .login-container {
-    background-color:#f6ad48;
-    border-radius: 10px;
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
     padding: 10px;
-    position: relative;
-    top: 25vh;
-    left: 15vw;
-    width: 70vw;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #321313;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px;
   }
 
-.btn{
-    background-color:  #321313;
-    border: none;
-    width: 100%;
+  .login-container button:hover{
+         background-color: #dc8a17;
+     }
+  
+  a {
+    color:#321313;
+    margin-left: 10px;
+  }
+
+  img{
+    max-width: 600px;
+  }
+
+/* Style de la ligne horizontale */
+.horizontal-line {
+    border-top: 1px solid #000; 
+    width: 80%; 
+    margin: 50px auto; 
 }
 
-.login-container button:hover{
-    background-color: #133213;
-}
+
+  @media screen and (min-width: 128px) and (max-width: 1042px) {
+    .img{
+        display: none;
+    }
+  }
