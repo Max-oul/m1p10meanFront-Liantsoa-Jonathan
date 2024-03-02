@@ -26,9 +26,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';
-    this.isAuthenticated = new Observable<boolean>(observer => {
-      observer.next(this.cookieService.check('user-data'));
-    });
+    this.isAuthenticated = this.authService.isAuthenticated();
   }
 
   openMenu(){
