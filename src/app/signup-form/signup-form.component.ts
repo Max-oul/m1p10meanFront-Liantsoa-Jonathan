@@ -33,6 +33,6 @@ export class SignupFormComponent implements OnInit{
   }
 
   login(){
-    this.router.navigateByUrl('home/login/')
+    this.router.navigateByUrl('home/auth/')
   }
 }

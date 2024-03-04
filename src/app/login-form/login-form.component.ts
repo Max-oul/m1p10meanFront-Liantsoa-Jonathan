@@ -46,5 +46,7 @@ export class LoginFormComponent {
         });
     }
   }
-  createAccount() {}
+  signup(){
+    this.router.navigateByUrl('home/signup/')
+  }
 }
