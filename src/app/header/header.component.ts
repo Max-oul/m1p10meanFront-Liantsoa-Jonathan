@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit {
       this.menu_icon = 'bi bi-list';
   }
 
-   onSignPage(){
+   onLoginPage(){
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';
     if(this.isAuthenticated){
