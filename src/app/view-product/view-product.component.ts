@@ -30,6 +30,6 @@ export class ViewProductComponent implements OnInit{
   }
 
   onBack(){
-    this.router.navigateByUrl('/home')
+    this.router.navigateByUrl('/')
   }
 }

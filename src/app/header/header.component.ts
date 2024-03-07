@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
    }
 
    onHomePage(){
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/');
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';
    }
@@ -50,9 +50,9 @@ export class HeaderComponent implements OnInit {
     this.menu_icon = 'bi bi-list';
     if(this.isAuthenticated){
       this.authService.logout();
-      this.router.navigateByUrl('/home/auth/');
+      this.router.navigateByUrl('/auth/');
     } else {
-      this.router.navigateByUrl('/home/auth/');
+      this.router.navigateByUrl('/auth/');
     }
    }
 

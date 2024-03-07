@@ -26,6 +26,6 @@ export class HomeComponent implements OnInit{
   }
 
   onAppointementScheduling(){
-    this.router.navigateByUrl('home/appointment_scheduling/')
+    this.router.navigateByUrl('/appointment_scheduling/')
   }
 }

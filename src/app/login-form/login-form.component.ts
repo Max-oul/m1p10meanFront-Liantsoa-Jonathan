@@ -38,7 +38,7 @@ export class LoginFormComponent {
         .subscribe({
           next: (reponse) => {
             console.log('Login successful');
-            this.router.navigate(['/home']);
+            this.router.navigate(['/']);
           },
           error: (error) => {
             console.log('Login failed');
@@ -47,6 +47,6 @@ export class LoginFormComponent {
     }
   }
   signup(){
-    this.router.navigateByUrl('home/signup/')
+    this.router.navigateByUrl('/signup/')
   }
 }

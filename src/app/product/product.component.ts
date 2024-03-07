@@ -22,6 +22,6 @@ export class ProductComponent implements OnInit{
   }
 
   onViewProduct(){
-    this.router.navigateByUrl(`home/product-view/${this.product.product_id}`)
+    this.router.navigateByUrl(`/product-view/${this.product.product_id}`)
   }
 }
